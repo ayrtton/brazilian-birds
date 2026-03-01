@@ -1,9 +1,10 @@
 import "./App.sass";
+import BrazilMap from "./components/BrazilMap";
 
 function App() {
     return (
         <>
-            Hello world
+            <BrazilMap/>
         </>
     );
 }
