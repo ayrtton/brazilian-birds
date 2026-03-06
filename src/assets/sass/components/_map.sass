@@ -1,0 +1,18 @@
+.map
+    fill: $map-bg-default
+    stroke: $map-border
+
+    &__path
+        fill: $map-bg-default
+        stroke: $map-border
+        stroke-width: 0.5
+        outline: none
+        transition: fill 0.2s ease
+
+        &:hover
+            fill: $map-hover
+            cursor: pointer
+
+        &:active, &:focus
+            fill: $map-active
+            outline: none
