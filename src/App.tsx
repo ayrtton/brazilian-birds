@@ -1,12 +1,9 @@
-import "./App.sass";
-import BrazilMap from "./components/BrazilMap";
+import Home from "./pages/Home";
 
-function App() {
+const App = () => {
     return (
-        <>
-            <BrazilMap/>
-        </>
+        <Home />
     );
-}
+};
 
 export default App;
