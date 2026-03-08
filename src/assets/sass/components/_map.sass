@@ -1,6 +1,19 @@
+@use "../abstracts" as *
+
 .map
-    fill: $map-bg-default
-    stroke: $map-border
+    width: 100%
+    max-width: 600px
+    margin: 0 auto
+    display: flex
+    overflow: hidden
+    line-height: 0
+    
+    &__svg
+        fill: $map-bg-default
+        stroke: $map-border
+        width: 100%
+        height: auto
+        display: block
 
     &__path
         fill: $map-bg-default
@@ -16,3 +29,4 @@
         &:active, &:focus
             fill: $map-active
             outline: none
+            

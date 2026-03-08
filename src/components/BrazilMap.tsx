@@ -5,21 +5,26 @@ const geoUrl =
 
 export default function BrazilMap() {
     return (
-        <ComposableMap
-            projection="geoMercator"
-            projectionConfig={{ scale: 500, center: [-55, -15] }}
-        >
-            <Geographies geography={geoUrl} className="map">
-                {({ geographies }) =>
-                    geographies.map((geo) => (
-                        <Geography
-                            key={geo.rsmKey}
-                            geography={geo}
-                            className="map__path"
-                        />
-                    ))
-                }
-            </Geographies>
-        </ComposableMap>
+        <div className="map">
+            <ComposableMap
+                className="map__svg"
+                projection="geoMercator"
+                width={800}
+                height={800}
+                projectionConfig={{ scale: 950, center: [-55, -15] }}
+            >
+                <Geographies className="map__path" geography={geoUrl}>
+                    {({ geographies }) =>
+                        geographies.map((geo) => (
+                            <Geography
+                                key={geo.rsmKey}
+                                geography={geo}
+                                className="map__path"
+                            />
+                        ))
+                    }
+                </Geographies>
+            </ComposableMap>
+        </div>
     );
 }
