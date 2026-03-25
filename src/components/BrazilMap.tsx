@@ -5,21 +5,21 @@ const geoUrl =
 
 export default function BrazilMap() {
     return (
-        <div className="map">
+        <div className="brazil-map">
             <ComposableMap
-                className="map__svg"
+                className="brazil-map__svg"
                 projection="geoMercator"
                 width={800}
                 height={800}
                 projectionConfig={{ scale: 950, center: [-55, -15] }}
             >
-                <Geographies className="map__path" geography={geoUrl}>
+                <Geographies className="brazil-map__path" geography={geoUrl}>
                     {({ geographies }) =>
                         geographies.map((geo) => (
                             <Geography
                                 key={geo.rsmKey}
                                 geography={geo}
-                                className="map__path"
+                                className="brazil-map__path"
                             />
                         ))
                     }
