@@ -8,7 +8,7 @@ const Home = () => {
                     <h2 className="map-container__title">Selecione um Estado</h2>
                 </header>
                 <div className="map-container__content">
-                    <BrazilMap className="map__container" />
+                    <BrazilMap />
                 </div>
             </section>
         </main>
